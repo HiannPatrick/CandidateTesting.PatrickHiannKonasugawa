@@ -5,15 +5,34 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Backend.BDD
 {
 	public class InputCommand :InputCommandAbstract, IInputCommand
 	{
+		/// <summary>
+		/// Get the address to provider file.
+		/// </summary>
 		public string SourceUrl { get => _sourceUrl; }
+
+		/// <summary>
+		/// Get the concatenation of the folder and name of the file to be created.
+		/// </summary>
 		public string TargetPath { get => _targetPath; }
 
+		/// <summary>
+		/// Return a error message.
+		/// </summary>
 		public IReturnMessage ReturnMessage { get => _returnMessage; }
 
+		/// <summary>
+		/// Create an instance of this class, validating and keeping the command typed by the user
+		/// </summary>
+		/// <param name="returnMessage">Will be used to return a error message</param>
+		/// <param name="command">The command typed by user</param>
 		public InputCommand( IReturnMessage returnMessage, string? command ) : base( returnMessage, command )
 		{
 		}
 
+		/// <summary>
+		/// Method that validates commands entered by the user
+		/// </summary>
+		/// <param name="command">Commando typed by user in frontend</param>
 		protected override void Validate( string? command )
 		{
 			if( string.IsNullOrEmpty( command ) )

@@ -8,12 +8,20 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Backend.BDD
 {
 	public class BuildAgoraFile :BuildProviderFileAbstract, IProviderFile
 	{
+		/// <summary>
+		/// Create an instance of this class and write a file in "Agora" layout, using a list of IProvider.
+		/// </summary>
+		/// <param name="returnMessage">Will be used to return a error message</param>
+		/// <param name="providersList">Contains the data that will be written in the layout of the "Agora" file</param>
 		public BuildAgoraFile( IReturnMessage returnMessage, IProvidersList providersList )
 			: base( returnMessage, providersList )
 		{
 
 		}
 
+		/// <summary>
+		/// Method to write an IProvider in  layout of the Agora File.
+		/// </summary>
 		public override void Write()
 		{
 			try

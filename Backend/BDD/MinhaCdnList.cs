@@ -7,15 +7,34 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Backend.BDD
 {
 	public class MinhaCdnList :ProvidersListAbstract, IProvidersList
 	{
+		/// <summary>
+		/// Return a error message.
+		/// </summary>
 		public IReturnMessage ReturnMessage { get => _returnMessage; }
+
+		/// <summary>
+		/// Command typed by the user, after validated and formatted.
+		/// </summary>
 		public IInputCommand InputCommand { get => _inputCommand; }
+
+		/// <summary>
+		/// List of provider
+		/// </summary>
 		public List<IProvider> ListOfMinhaCdn { get => _listOfMinhaCdn; }
 
+		/// <summary>
+		/// Creates an instance of this class, which will populate a "MyCdn" list. 
+		/// </summary>
+		/// <param name="returnMessage">Will be used to return a error message</param>
+		/// <param name="command">Command typed by the user, after validated and formatted</param>
 		public MinhaCdnList( IReturnMessage returnMessage, IInputCommand command )
 			: base( returnMessage, command )
 		{
 		}
 
+		/// <summary>
+		/// Method that fill list of "MinhaCDN", using a STREAM object.
+		/// </summary>
 		protected override void FillList()
 		{
 			try
