@@ -36,7 +36,7 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Backend.BDD
 					sw.WriteLine( "#Date: "
 								  + DateTime.Now.ToShortDateString()
 								  + " "
-								  + DateTime.Now.ToShortTimeString() );
+								  + DateTime.Now.ToLongTimeString() );
 
 					sw.WriteLine( "#Fields: " + strProperties );
 

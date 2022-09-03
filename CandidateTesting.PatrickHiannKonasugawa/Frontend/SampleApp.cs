@@ -10,20 +10,16 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Frontend
 		protected override void Init()
 		{
 			Console.WriteLine( "Starting Sample..." );
-			
-			Thread.Sleep( 1500 );
 
 			Console.WriteLine( "URL: " + sourceUrl );
 
-			Thread.Sleep( 1500 );
-
 			Console.WriteLine( "Target Path: " + targetPath );
-
-			Thread.Sleep( 1500 );
 
 			string command = "convert " + sourceUrl + " " + targetPath;
 
 			this.Execute( command );
+
+			Thread.Sleep( 2000 );
 		}
 	}
 }
