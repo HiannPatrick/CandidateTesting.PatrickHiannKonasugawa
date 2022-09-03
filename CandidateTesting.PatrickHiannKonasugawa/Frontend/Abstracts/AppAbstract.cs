@@ -38,9 +38,16 @@ namespace CandidateTesting.PatrickHiannKonasugawa.Frontend.Abstracts
 			Static.TextFiles.Exists( returnMessage, facade.InputCommand.TargetPath );
 
 			if( returnMessage.Error )
-				return;
+			{
+				ShowErrorMessage( returnMessage.ErrorMessage );
+			}
 
 			Static.TextFiles.OpenInNotepad( returnMessage, facade.InputCommand.TargetPath );
+
+			if( returnMessage.Error )
+			{
+				ShowErrorMessage( returnMessage.ErrorMessage );
+			}
 		}
 		protected void ShowErrorMessage( string errorMessage )
 		{

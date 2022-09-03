@@ -5,7 +5,7 @@ while( true )
 	Console.Clear();
 	Console.WriteLine( "Do you want to do?" );
 	Console.WriteLine( "1 - Type a custom command" );
-	Console.WriteLine( "2 - See a mock test;" );
+	Console.WriteLine( "2 - See a sample;" );
 	Console.WriteLine( "0 - Close this application;" );
 	Console.Write( "Your choice: " );
 
@@ -19,7 +19,7 @@ while( true )
 			new MainApp();
 			break;
 		case '2':
-			new MockApp();
+			new SampleApp();
 			break;
 		default:
 			Console.Clear();
